@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { useRouter } from 'next/navigation'; // Changed import from "next/navigation"
 import { useState, useEffect } from "react";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import app from "./firebase.js";
 import Home from "./home/page.jsx";
 
 export default function Login() {
@@ -14,7 +13,6 @@ const [user, setUser] = useState(null);
     const auth = getAuth();
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        setUser(user);
         router.push("/home"); // Redirect to home page if user is authenticated
       } else {
         setUser(null);
@@ -31,7 +29,7 @@ const [user, setUser] = useState(null);
       await signInWithPopup(auth, provider);
       router.push("/home"); // Redirect to home page after successful login
     } catch (error) {
-      console.error("Error signing in with Google:", error.message);
+      console.error("Error signing in with Google:", error);
     }
 
     
