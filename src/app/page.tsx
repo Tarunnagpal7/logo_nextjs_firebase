@@ -8,7 +8,7 @@ import Home from "./home/page.jsx";
 
 export default function Login() {
   const router = useRouter(); // Moved router initialization outside useEffect
-  const [user, setUser] = useState<User | null>(null); // Specify the type as User | null
+const [user, setUser] = useState(null);
   
   useEffect(() => {
     const auth = getAuth();
