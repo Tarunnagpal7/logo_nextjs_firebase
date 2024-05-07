@@ -4,7 +4,7 @@ import Head from 'next/head';
 import React, { useEffect, useState } from "react";
 import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
 import { useRouter } from"next/navigation";
-import app from "../firebase.js";
+import * as app from "../firebase.js";
 
 
 export default function Home() {
