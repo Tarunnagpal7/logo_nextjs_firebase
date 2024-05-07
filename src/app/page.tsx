@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'; // Changed import from "next/naviga
 import { useState, useEffect } from "react";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import Home from "./home/page.jsx";
+import app from "./firebase.js";
 
 export default function Login() {
   const router = useRouter(); // Moved router initialization outside useEffect
