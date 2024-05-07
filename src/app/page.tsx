@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/navigation'; // Changed import from "next/navigation"
 import { useState, useEffect } from "react";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { app } from "./firebase.js";
+import app from "./firebase.js";
 import Home from "./home/page.jsx";
 
 export default function Login() {
