@@ -54,7 +54,7 @@ const handleLogout = async () =>{
           </div>
         </nav>
        <h1 className='m-5 font-bold text-3xl' > Popular Topics 🔥 </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 m-5  flex flex-row xl:flex-col lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 m-5  flex-row xl:flex-col lg:grid-cols-4 gap-4">
           {topics.map((topic, index) => (
             <div key={index} className="bg-blue-950 w-full my-10 rounded-lg shadow-md p-6 mb-4 ">
               <div className="flex flex-col xl:flex-row">
